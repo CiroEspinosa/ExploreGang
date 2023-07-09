@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PM_Button.Primary">
+        <item name="android:backgroundTint">@color/green</item>
+    </style>
+    <style name="tilMessageError">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="PM_CloseIcon">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="srcCompat">@drawable/ic_close</item>
+    </style>
+</resources>

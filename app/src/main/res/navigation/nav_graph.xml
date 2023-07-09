@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLogin">
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.exploregang.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentSingUp"
+            app:destination="@id/fragmentSingUp" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.exploregang.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.exploregang.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentActivities"
+            app:destination="@id/fragmentActivities" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAsociations"
+            app:destination="@id/fragmentAsociations" />
+        <action
+            android:id="@+id/action_fragmentHome_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActivities"
+        android:name="com.example.exploregang.ui.eventlist.EventsListFragment"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" >
+        <action
+            android:id="@+id/action_fragmentActivities_to_fragmentActivity"
+            app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSingUp"
+        android:name="com.example.exploregang.ui.singup.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_fragmentSingUp_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAsociation"
+        android:name="com.example.exploregang.ui.association.AsociationFragment"
+        android:label="fragment_asociation"
+        tools:layout="@layout/fragment_asociation" />
+    <fragment
+        android:id="@+id/fragmentActivity"
+        android:name="com.example.exploregang.ui.event.EventFragment"
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity" />
+    <fragment
+        android:id="@+id/fragmentAsociations"
+        android:name="com.example.exploregang.ui.associationlist.AsociationsListFragment"
+        android:label="fragment_asociations"
+        tools:layout="@layout/fragment_asociations" >
+        <action
+            android:id="@+id/action_fragmentAsociations_to_fragmentAsociation"
+            app:destination="@id/fragmentAsociation" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSearchOptions"
+        android:name="com.example.exploregang.SearchOptionsFragment"
+        android:label="fragment_search_options"
+        tools:layout="@layout/fragment_search_options" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.exploregang.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

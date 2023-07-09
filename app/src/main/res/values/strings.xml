@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">ExploreGang</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must have at least 6 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_button_recover_password">Forgot my password</string>
+    <string name="login_button_register">Not registered yet?</string>
+    <string name="login_button_skip">skip</string>
+    <string name="see_all_m">Ver todo</string>
+    <string name="nextEvents">Next events</string>
+    <string name="nextEvent">Next event</string>
+    <string name="lastActivity">Last activity</string>
+    <string name="lastActivityCarriedOut">Last activity carried out</string>
+    <string name="title_home">Home</string>
+    <string name="title_activities">Activities</string>
+    <string name="title_asociations">Asociations</string>
+    <string name="register_hint_name">Name</string>
+    <string name="login_hint_email">mail@example.com</string>
+    <string name="register_message_select_dob">Select a date of birth</string>
+    <string name="profile_update_text_phone_code">Phone code</string>
+    <string name="profile_update_hint_phone">Phone</string>
+    <string name="profile_update_hint_birth_date">Birth date</string>
+    <string name="login_hint_password">Password</string>
+    <string name="register_hint_repeat_password">Repeat password</string>
+    <string name="profile_update_hint_dni">Personal ID</string>
+    <string name="profile_text_nick">Nick</string>
+    <string name="register_hint_surname">Surname</string>
+    <string name="register">Sing In</string>
+    <string name="my_activities">My activities</string>
+    <string name="see_all">See all</string>
+    <string name="posts">Posts</string>
+    <string name="register_update_user_data">User info</string>
+    <string name="activity_register_account_data">Account information</string>
+    <string name="sing_up">Sing up</string>
+    <string name="tutorInformation">Tutor info</string>
+    <string name="tutor_name">Tutor name</string>
+    <string name="name_empty">Name empty</string>
+    <string name="register_message_surname_empty">Surname empty</string>
+    <string name="nick_empty">Nick empty</string>
+    <string name="dob_future">The date of birth cannot be in the future</string>
+    <string name="dni_invalid">Invalid personal ID</string>
+    <string name="neg_next_event">There are no upcoming events</string>
+    <string name="no_activities">You are currently not registered for any upcoming activities</string>
+    <string name="activities">Activities</string>
+    <string name="no_posts">There are currently no posts to display.</string>
+    <string name="register_message_email_short">Email is too short</string>
+    <string name="register_message_email_incorrect">Email not valid</string>
+    <string name="register_message_password_short">Password too short</string>
+    <string name="register_message_passwords_different">Passwords do not match</string>
+    <string name="drawer_text_logout">Logout</string>
+    <string name="delete_account">Delete account</string>
+    <string name="menu_support_chat">Help?</string>
+    <string name="settings_tutorials">Tutorials</string>
+    <string name="settings_share">Share ExploreGang</string>
+    <string name="settings_text_others">Others</string>
+    <string name="my_payments_data">Payment data</string>
+    <string name="drawer_notification">Notifications</string>
+    <string name="drawer_favorites">Favourites</string>
+    <string name="drawer_clubs">Clubs</string>
+    <string name="a_player">A player</string>
+    <string name="login_text_access_account">Login</string>
+    <string name="drawer_associations">Associations</string>
+    <string name="help">Help?</string>
+    <string name="social">Social</string>
+    <string name="reject">Reject</string>
+    <string name="write_comment_write_here">Write your comment</string>
+    <string name="write_something">Write something...</string>
+    <string name="ok">Ok</string>
+    <string name="go_to_activities">Search activities</string>
+    <string name="phone_short">Insert your phone number</string>
+    <string name="stay_signed_in">Stay singed in?</string>
+    <string name="stay_signed_in_message">Stay signed in so you don\'t have to sign in again next time.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="do_not_show_again">Don\'t show this again</string>
+    <string name="stay_signed_in2">Stay signed in</string>
+    <string name="remember_me">Remember me</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llValidateResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivClose"
+            style="@style/PM_CloseIcon"
+            android:layout_gravity="end"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/secondary"
+            android:textSize="20sp"
+            tools:text="Title" />
+
+        <ScrollView
+            android:id="@+id/svMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:fontFamily="@font/opensans_regular"
+                android:textAlignment="center"
+                android:textColor="@color/secondary"
+                android:textSize="18sp"
+                tools:text="Message content" />
+        </ScrollView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="9dp"
+            app:boxCornerRadiusBottomStart="9dp"
+            app:boxCornerRadiusTopEnd="9dp"
+            app:boxCornerRadiusTopStart="9dp"
+
+            app:boxStrokeColor="#1C979797"
+            app:boxStrokeWidth="1dp"
+
+            app:errorIconDrawable="@color/transparent"
+            app:errorTextAppearance="@style/tilMessageError"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="top"
+                android:hint="@string/write_comment_write_here"
+                android:inputType="textMultiLine|text"
+                android:lines="2"
+                android:maxLength="140"
+                android:maxLines="2"
+                android:minLines="2"
+                android:padding="@dimen/small"
+                android:singleLine="false"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/text_size_18" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:layout_marginTop="@dimen/large"
+            android:id="@+id/cbDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:visibility="gone"
+            android:text="@string/do_not_show_again" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDefault"
+                style="@style/PM_Button.OutlinedButton.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="@string/reject" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

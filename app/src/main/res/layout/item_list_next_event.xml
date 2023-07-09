@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="9dp"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="3dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="15dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imv_curve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvActividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ellipsize="end"
+
+                    android:lines="2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView2"
+                    app:layout_constraintStart_toEndOf="@+id/imv_curve"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Actividad" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+
+                    android:ellipsize="end"
+                    android:letterSpacing="-0.04"
+                    android:lineSpacingExtra="2sp"
+
+                    android:lines="2"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imv_curve"
+                    tools:text="Carrera dfsdf   s dfsdfsd df sdf sdf ds edxfgx fbxc fbfcb xfc b xcbv  fcfbvfcgbvfcvb fcgbcbfcb fsd fsdfsfddsf sd" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/background_rounded_border_logo"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:letterSpacing="-0.04"
+            android:lines="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+           tools:text="Faltan 2 días" />
+    </RelativeLayout>
+</layout>
