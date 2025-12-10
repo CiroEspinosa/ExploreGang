@@ -18,7 +18,7 @@
     </fragment>
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.example.exploregang.activity.MainActivity"
+        android:name="com.example.exploregang.ui.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <fragment
@@ -28,22 +28,40 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_fragmentActivities"
-            app:destination="@id/fragmentActivities" />
+            app:destination="@id/fragmentActivityList" />
         <action
             android:id="@+id/action_fragmentHome_to_fragmentAsociations"
-            app:destination="@id/fragmentAsociations" />
+            app:destination="@id/fragmentUserList" />
         <action
             android:id="@+id/action_fragmentHome_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_fragmentHome_to_activityDetailFragment"
+            app:destination="@id/activityDetailFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_otherActivityListFragment"
+            app:destination="@id/otherActivityListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentActivities"
-        android:name="com.example.exploregang.ui.eventlist.EventsListFragment"
+        android:id="@+id/fragmentActivityList"
+        android:name="com.example.exploregang.ui.activityList.ActivityListFragment"
         android:label="fragment_activities"
-        tools:layout="@layout/fragment_activities" >
+        tools:layout="@layout/fragment_activity_list" >
         <action
-            android:id="@+id/action_fragmentActivities_to_fragmentActivity"
-            app:destination="@id/fragmentActivity" />
+            android:id="@+id/action_fragmentActivityList_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <action
+            android:id="@+id/action_fragmentActivityList_to_activityDetailFragment"
+            app:destination="@id/activityDetailFragment" />
+        <action
+            android:id="@+id/action_fragmentActivityList_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSingUp"
@@ -55,32 +73,89 @@
             app:destination="@id/fragmentHome" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentAsociation"
-        android:name="com.example.exploregang.ui.association.AsociationFragment"
-        android:label="fragment_asociation"
-        tools:layout="@layout/fragment_asociation" />
-    <fragment
-        android:id="@+id/fragmentActivity"
-        android:name="com.example.exploregang.ui.event.EventFragment"
-        android:label="fragment_activity"
-        tools:layout="@layout/fragment_activity" />
-    <fragment
-        android:id="@+id/fragmentAsociations"
-        android:name="com.example.exploregang.ui.associationlist.AsociationsListFragment"
-        android:label="fragment_asociations"
-        tools:layout="@layout/fragment_asociations" >
+        android:id="@+id/fragmentUserList"
+        android:name="com.example.exploregang.ui.userList.UserListFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_user_list">
         <action
-            android:id="@+id/action_fragmentAsociations_to_fragmentAsociation"
-            app:destination="@id/fragmentAsociation" />
+            android:id="@+id/action_fragmentUserList_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentSearchOptions"
-        android:name="com.example.exploregang.SearchOptionsFragment"
-        android:label="fragment_search_options"
-        tools:layout="@layout/fragment_search_options" />
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.exploregang.ui.settings.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.exploregang.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_profileFragment_to_otherUserListFragment"
+            app:destination="@id/otherUserListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="com.example.exploregang.ui.addActivity.AddActivityFragment"
+        android:label="fragment_add_activity"
+        tools:layout="@layout/fragment_add_activity" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.exploregang.ui.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/activityDetailFragment"
+        android:name="com.example.exploregang.ui.activityDetail.ActivityDetailFragment"
+        android:label="ActivityDetailFragment" >
+        <action
+            android:id="@+id/action_activityDetailFragment_to_otherUserListFragment"
+            app:destination="@id/otherUserListFragment" />
+        <action
+            android:id="@+id/action_activityDetailFragment_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_activityDetailFragment_to_editActivityFragment"
+            app:destination="@id/editActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.exploregang.ui.otherProfile.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" />
+    <fragment
+        android:id="@+id/otherUserListFragment"
+        android:name="com.example.exploregang.ui.otherUserLists.OtherUserListFragment"
+        android:label="fragment_other_user_list"
+        tools:layout="@layout/fragment_other_user_list" >
+        <action
+            android:id="@+id/action_otherUserListFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherActivityListFragment"
+        android:name="com.example.exploregang.ui.activityList.OtherActivityListFragment"
+        android:label="fragment_other_activity_list"
+        tools:layout="@layout/fragment_other_activity_list" >
+        <action
+            android:id="@+id/action_otherActivityListFragment_to_activityDetailFragment"
+            app:destination="@id/activityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editActivityFragment"
+        android:name="com.example.exploregang.ui.editActivity.EditActivityFragment"
+        android:label="fragment_edit_activity"
+        tools:layout="@layout/fragment_edit_activity" />
 </navigation>

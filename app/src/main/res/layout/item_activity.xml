@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+
+            app:cardElevation="3dp"
+            app:cardMaxElevation="3dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="15dp">
+
+
+                <ImageView
+                    android:id="@+id/ivCalendar"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCreator"
+                    app:layout_constraintStart_toEndOf="@+id/tvCreator"
+                    app:layout_constraintTop_toTopOf="@+id/ivCreator" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_marginStart="3dp"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCalendar"
+                    app:layout_constraintStart_toEndOf="@+id/ivCalendar"
+                    app:layout_constraintTop_toTopOf="@+id/ivCalendar"
+                    tools:text="10/10/2020" />
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+
+
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/location"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCalendar"
+                    app:layout_constraintStart_toEndOf="@id/tvStartDate"
+                    app:layout_constraintTop_toTopOf="@+id/ivCalendar"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+
+                    android:ellipsize="end"
+
+                    android:maxLines="1"
+                    android:textSize="12sp"
+
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivLocation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivLocation"
+                    app:layout_constraintTop_toTopOf="@+id/ivLocation"
+                    tools:text="localización"
+                    tools:visibility="visible" />
+
+             <!--   <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCreator"
+                    app:layout_constraintStart_toEndOf="@+id/tvCreator"
+                    app:layout_constraintTop_toTopOf="@+id/ivCreator"/>
+-->
+                <ImageView
+                    android:id="@+id/ivActivityPhotoItem"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                   
+                    android:scaleType="centerCrop"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivActivityPhotoItem"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivActivityPhotoItem"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_activity_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/ivActivityPhotoItem"
+                        app:layout_constraintTop_toTopOf="@+id/ivActivityPhotoItem"
+                        tools:text="Nombre" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textSize="12dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/tvStartDate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_activity_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_activity_name"
+                        tools:text="DescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripciónDescripción" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <ImageView
+                    android:id="@+id/ivCreator"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/moai"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivActivityPhotoItem" />
+
+                <TextView
+                    android:id="@+id/tvCreator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+
+                    android:layout_marginStart="3dp"
+                    android:ellipsize="end"
+                    android:maxLength="20"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCreator"
+                    app:layout_constraintStart_toEndOf="@+id/ivCreator"
+                    app:layout_constraintTop_toTopOf="@+id/ivCreator"
+                    tools:text="creador" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/background_rounded_border_logo"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:letterSpacing="-0.04"
+            android:lines="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="15sp"
+            android:visibility="gone"
+            tools:text="Faltan 2 días" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:minWidth="350dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_semibold"
+                android:gravity="center_vertical"
+                android:maxEms="9"
+                android:maxLines="2"
+                android:text="@string/title_filters"
+                android:textSize="26sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivClose"
+                style="@style/PM_CloseIcon" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+      <!--  <CheckBox
+            android:id="@+id/cbSeeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/see_all" />
+
+        <CheckBox
+            android:id="@+id/cbEnrolled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/activities_enrolled" />
+
+        <CheckBox
+            android:id="@+id/cbOrganized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/activities_created" />
+-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_semibold"
+            android:gravity="center_vertical"
+            android:maxEms="9"
+            android:maxLines="2"
+            android:text="@string/search_for_activity"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etSearchForActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_textfields"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/small"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:hint="@string/etSearchForActivity_hint"
+            android:inputType="text"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_semibold"
+            android:gravity="center_vertical"
+            android:maxEms="9"
+            android:maxLines="2"
+            android:text="@string/date"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchForDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_textfields"
+            android:drawableStart="@drawable/ic_calendarr"
+            android:drawablePadding="@dimen/small"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:hint="@string/date_format"
+            android:inputType="text"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_semibold"
+            android:gravity="center_vertical"
+            android:maxEms="9"
+            android:maxLines="2"
+            android:text="@string/location"
+            android:textSize="20sp" />
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="20dp">
+    <EditText
+            android:id="@+id/etSearchForLocation"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/background_textfields"
+            android:drawableStart="@drawable/location"
+            android:drawablePadding="@dimen/small"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:hint="@string/location"
+            android:inputType="text"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/btnSearchLocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:visibility="gone" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCleanFilters"
+                style="@style/PM_Button.OutlinedButton.Secondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/clean_filters" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                style="@style/PM_Button.Primary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/generic_search1" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+</layout>

@@ -9,4 +9,9 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+    <string-array name="add_picture_options">
+        <item>Make picture</item>
+        <item>Select from gallery</item>
+    </string-array>
+
 </resources>

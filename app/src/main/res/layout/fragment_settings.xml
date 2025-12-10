@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.settings.SettingsFragment">
+    tools:context=".ui.settings.SettingsFragment"
+   >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         >
 
         <FrameLayout
@@ -22,17 +24,14 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+
                     android:id="@+id/profileLayout"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:layout_marginTop="@dimen/large"
-                    android:layout_marginBottom="@dimen/large_xxx"
-                    android:background="@color/white"
-                    android:clickable="true"
+                      android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/medium">
+                    android:orientation="horizontal">
 
 
                     <LinearLayout
@@ -40,31 +39,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+
                         android:orientation="horizontal"
-                        android:paddingTop="@dimen/small_x"
-                        android:paddingBottom="@dimen/small_x">
+                       >
 
                         <ImageView
-                            android:id="@+id/avatarImageView"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginEnd="@dimen/medium"
-                            android:background="@drawable/background_circle_white"
+                            android:padding="20dp"
+                            android:id="@+id/ivUserPhoto"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:contentDescription="@string/app_name"
-                            android:padding="@dimen/small_x"
+
+
                             android:scaleType="centerCrop"
-                            android:src="@drawable/usersvglineas" />
+                            android:src="@drawable/usericon" />
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/small"
+android:layout_marginStart="10dp"
                             android:layout_weight="1"
                             android:gravity="center|start"
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/nameLabel"
+                                android:textStyle="bold"
+                                android:id="@+id/tvNameLabel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/a_player"
@@ -77,34 +77,43 @@
                     </LinearLayout>
 
                 </LinearLayout>
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/logo"
+                   />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/associationsLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/small_xx"
-                    android:background="@color/white"
+
                     android:clickable="true"
+                    android:elevation="2dp"
                     android:focusable="true"
                     android:orientation="horizontal"
-                    android:padding="@dimen/medium">
+                    android:padding="@dimen/medium"
+                    android:visibility="gone">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imgAssociation"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/asociacion2"
+                        android:src="@drawable/moai"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tvAssociations"
+                        android:id="@+id/tvAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:drawablePadding="10dp"
-                        android:text="@string/drawer_associations"
+                        android:text="@string/association"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -113,13 +122,13 @@
                         app:layout_constraintTop_toTopOf="@+id/imgAssociation" />
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="right"
                         android:src="@drawable/derechagorda"
-                        app:layout_constraintBottom_toBottomOf="@+id/tvAssociations"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAccount"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tvAssociations" />
+                        app:layout_constraintTop_toTopOf="@+id/tvAccount" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -127,17 +136,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/small_xx"
-                    android:background="@color/white"
+
                     android:clickable="true"
+                    android:elevation="2dp"
                     android:focusable="true"
                     android:orientation="horizontal"
-                    android:padding="@dimen/medium">
+                    android:padding="@dimen/medium"
+                    android:visibility="gone">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imgNotification"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/campana"
+                        android:src="@drawable/ic_notifications1"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -157,148 +168,247 @@
                         app:layout_constraintTop_toTopOf="@+id/imgNotification" />
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="right"
                         android:src="@drawable/derechagorda"
                         app:layout_constraintBottom_toBottomOf="@+id/tvNotifications"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tvNotifications" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/othersLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_xx"
-                android:background="@color/white"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="horizontal"
-                android:padding="@dimen/medium">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/imgothers"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/gears"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tvOthers"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/othersLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/settings_text_others"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    app:layout_constraintBottom_toBottomOf="@+id/imgothers"
-                    app:layout_constraintStart_toEndOf="@+id/imgothers"
-                    app:layout_constraintTop_toTopOf="@+id/imgothers" />
+                    android:layout_marginBottom="@dimen/small_xx"
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/derechagorda"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvOthers"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tvOthers" />
-            </androidx.constraintlayout.widget.ConstraintLayout> <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/shareLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_xx"
-                android:background="@color/white"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="horizontal"
-                android:padding="@dimen/medium">
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium"
+                    android:visibility="gone">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/imgshare"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/compartirr"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgothers"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/gears"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvshare"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tvOthers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/settings_text_others"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgothers"
+                        app:layout_constraintStart_toEndOf="@+id/imgothers"
+                        app:layout_constraintTop_toTopOf="@+id/imgothers" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOthers"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvOthers" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/shareLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/settings_share"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    app:layout_constraintBottom_toBottomOf="@+id/imgshare"
-                    app:layout_constraintStart_toEndOf="@+id/imgshare"
-                    app:layout_constraintTop_toTopOf="@+id/imgshare" />
+                    android:layout_marginBottom="@dimen/small_xx"
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/derechagorda"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvshare"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tvshare" />
-            </androidx.constraintlayout.widget.ConstraintLayout> <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/helpLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_xx"
-                android:background="@color/white"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="horizontal"
-                android:padding="@dimen/medium">
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium"
+                    android:visibility="gone">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/imgHelp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/help"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgshare"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/share"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvhelp"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tvshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/settings_share"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgshare"
+                        app:layout_constraintStart_toEndOf="@+id/imgshare"
+                        app:layout_constraintTop_toTopOf="@+id/imgshare" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvshare"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvshare" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/aboutLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:drawablePadding="10dp"
-                    android:text="@string/help"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="false"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    app:layout_constraintBottom_toBottomOf="@+id/imgHelp"
-                    app:layout_constraintStart_toEndOf="@+id/imgHelp"
-                    app:layout_constraintTop_toTopOf="@+id/imgHelp" />
+                    android:layout_marginBottom="@dimen/small_xx"
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/derechagorda"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvhelp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tvhelp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgAbout"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/moai"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/about"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgAbout"
+                        app:layout_constraintStart_toEndOf="@+id/imgAbout"
+                        app:layout_constraintTop_toTopOf="@+id/imgAbout" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAbout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvAbout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/infoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_xx"
+
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgInfo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_info"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/info"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgInfo"
+                        app:layout_constraintStart_toEndOf="@+id/imgInfo"
+                        app:layout_constraintTop_toTopOf="@+id/imgInfo" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvInfo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvInfo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/helpLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_xx"
+
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgHelp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/help"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvhelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/help"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgHelp"
+                        app:layout_constraintStart_toEndOf="@+id/imgHelp"
+                        app:layout_constraintTop_toTopOf="@+id/imgHelp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvhelp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvhelp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cldeleteaccount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/small_xx"
-                    android:background="@color/white"
+
                     android:clickable="true"
+                    android:elevation="2dp"
                     android:focusable="true"
                     android:orientation="horizontal"
                     android:padding="@dimen/medium">
@@ -307,7 +417,7 @@
                         android:id="@+id/imgdeleteaccount"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/usericon"
+                        android:src="@drawable/ic_no_user"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -327,13 +437,58 @@
                         app:layout_constraintTop_toTopOf="@+id/imgdeleteaccount" />
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="right"
                         android:src="@drawable/derechagorda"
                         app:layout_constraintBottom_toBottomOf="@+id/tvdeleteaccount"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tvdeleteaccount" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cllogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_xx"
+
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/medium">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imglogout"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_logout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvlogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawablePadding="10dp"
+                        android:text="@string/drawer_text_logout"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:layout_constraintBottom_toBottomOf="@+id/imglogout"
+                        app:layout_constraintStart_toEndOf="@+id/imglogout"
+                        app:layout_constraintTop_toTopOf="@+id/imglogout" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/derechagorda"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvlogout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvlogout" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- View invisible for frame scroll view, botch job-->
@@ -342,7 +497,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/small_xx"
-                    android:background="@color/white"
+
                     android:orientation="horizontal"
                     android:padding="@dimen/medium"
                     android:visibility="gone">
@@ -366,32 +521,5 @@
         </FrameLayout>
 
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium"
-        android:background="@color/gray_dark"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="@dimen/medium"
-        android:visibility="gone"
-        tools:visibility="visible">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/drawer_text_logout"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-    </LinearLayout>
 
 </FrameLayout>

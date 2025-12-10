@@ -3,351 +3,300 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgLogo"
-                android:layout_width="179dp"
-                android:layout_height="match_parent"
-                android:layout_alignTop="@+id/btnUser"
-                android:layout_alignBottom="@+id/btnUser"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="11dp"
-                android:layout_marginTop="-16dp"
-                android:layout_marginBottom="-16dp"
-                android:src="@drawable/logo"
-                android:visibility="visible" />
-
-            <ImageView
-                android:id="@+id/btnMessages"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-
-                android:layout_alignTop="@+id/btnUser"
-                android:layout_alignBottom="@+id/btnUser"
-
-
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="52dp"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:src="@drawable/ic_messages" />
-
-            <ImageButton
-                android:id="@+id/btnUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="10dp"
-
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:src="@drawable/ic_settings_white_24dp" />
-        </RelativeLayout>
-
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/scroll_root"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp">
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvNextEvent"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="9dp"
-                    app:cardElevation="3dp"
-                    app:cardMaxElevation="3dp"
-                    tools:visibility="visible">
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivUserPhoto"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+
+                        android:contentDescription="@string/app_name"
+                        android:padding="20dp"
+
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvhello"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvhello" />
+
+                    <ImageView
+                        android:id="@+id/btnMessages"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignTop="@+id/btnSettings"
+                        android:layout_alignBottom="@+id/btnSettings"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+
+
+                        android:padding="10dp"
+                        android:src="@drawable/ic_messages"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnSettings"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/btnSettings"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="10dp"
+                        android:src="@drawable/gear"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvhello"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/ivUserPhoto"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:gravity="center"
+
+                        android:padding="10dp"
+                        android:text="@string/hello_guest"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnMessages"
+
+                        app:layout_constraintEnd_toStartOf="@+id/btnMessages"
+                        app:layout_constraintStart_toEndOf="@+id/ivUserPhoto"
+                        app:layout_constraintTop_toTopOf="@+id/btnMessages"
+                        tools:text="Hola" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@color/logo" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
 
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/llcNextEvent"
+                        android:id="@+id/llNoActivities"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="12dp"
-                        android:layout_marginVertical="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        tools:visibility="visible">
 
                         <TextView
-                            android:id="@+id/tvNextEvent"
-                            android:layout_width="wrap_content"
+                            android:layout_width="300dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/nextEvent"
-
-
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="20dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/no_activities"
                             android:textSize="18sp" />
 
-                        <LinearLayout
-                            android:id="@+id/llNextEventInfo"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/btnActivities"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/activities2" />
 
-                            <FrameLayout
-                                android:id="@+id/flnextEvent"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:text="@string/go_to_activities"
+                            android:textSize="14sp" />
 
-                                <!--<include layout="@layout/item_post"></include>-->
-                            </FrameLayout>
+                        <TextView
 
-
-                            <LinearLayout
-                                android:id="@+id/nextEventDataLly"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="22dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:src="@drawable/calendar" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="5dp"
-
-                                    android:lineSpacingExtra="2sp"
-
-                                    android:textSize="18sp"
-                                    tools:text="07/04" />
-
-                                <ImageView
-                                    android:layout_width="22dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="7dp"
-                                    android:src="@drawable/clock" />
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="5dp"
-                                    android:letterSpacing="-0.03"
-
-
-                                    android:textSize="18sp"
-                                    tools:text="12:45" />
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="7dp"
-                                    android:src="@drawable/location" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="5dp"
-
-
-                                    android:textSize="18sp"
-                                    tools:text="1,2 km" />
-
-                            </LinearLayout>
-                        </LinearLayout>
+                            android:id="@+id/tvInfoActivity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="@string/login_for_follow"
+                            android:textSize="18sp" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/llNoActivities"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    tools:visibility="visible">
-
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
-                        android:text="@string/no_activities"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/btnActivities"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/activities2"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
-                        android:text="@string/go_to_activities"
-                        android:textSize="14sp" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <LinearLayout
-                    android:id="@+id/llMyActivities"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <LinearLayout
+                        android:id="@+id/llNextActivities"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tvMyActivities"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lineSpacingExtra="2sp"
-                            android:text="@string/my_activities"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/btnSeeAllActivities"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/see_all" />
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvMyActivitiesList"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
-                        android:orientation="horizontal"
-                        android:overScrollMode="never"
-                        android:paddingStart="15dp"
-                        android:paddingTop="8dp"
-
-                        android:paddingBottom="15dp"
-                        android:scrollbars="none"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-                        tools:listitem="@layout/item_list_next_event" />
-                </LinearLayout>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/llNoPost"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                  >
-
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
-                        android:text="@string/no_posts"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/activities2"/>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <LinearLayout
-                    android:id="@+id/llPosts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:id="@+id/llTitlePosts"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tvPosts"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lineSpacingExtra="2sp"
-                            android:text="@string/posts"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/btnSeeAllPosts"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/see_all" />
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvPost"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"
                         android:orientation="vertical"
-                        android:overScrollMode="never"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="8dp"
-                        android:paddingRight="15dp"
+                        android:visibility="visible"
 
-                        android:paddingBottom="15dp"
-                        android:scrollbars="none"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:visibility="visible">
 
-                        tools:listitem="@layout/item_post" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvNextActivity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+
+
+                                android:text="@string/nextActivity"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                tools:visibility="visible" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvNextActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="horizontal"
+                            android:overScrollMode="never"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:listitem="@layout/item_activity"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnSeeEnrolledActivities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+
+                            android:text="@string/see_enrolled_activities"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            tools:visibility="visible" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+
+                            android:src="@drawable/derechagorda"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnSeeOwnActivities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:padding="5dp"
+                            android:text="@string/see_own_activities"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            tools:visibility="visible" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+
+                            android:src="@drawable/derechagorda"/>
+
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-            </LinearLayout>
+        <ProgressBar
+            android:id="@+id/loadingP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.core.widget.NestedScrollView>
-
-    </LinearLayout>
 
 </layout>

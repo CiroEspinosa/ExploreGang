@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        app:cardBackgroundColor="@color/white"
+
         app:cardCornerRadius="9dp"
         app:cardElevation="3dp"
         app:cardMaxElevation="3dp"
@@ -37,7 +37,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_marginLeft="12dp"
 
-                android:id="@+id/imv_curve"
+                android:id="@+id/cv_curve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="30dp"
@@ -66,7 +66,7 @@
                 android:lines="1"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imv_curve"
+                app:layout_constraintStart_toEndOf="@+id/cv_curve"
                 app:layout_constraintTop_toBottomOf="@+id/img"
                 tools:text="Producto 1" />
 
@@ -83,7 +83,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/img"
                 app:layout_constraintStart_toStartOf="@+id/img"
-                app:layout_constraintTop_toBottomOf="@+id/imv_curve"
+                app:layout_constraintTop_toBottomOf="@+id/cv_curve"
                 tools:text="Carretera de El patio" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

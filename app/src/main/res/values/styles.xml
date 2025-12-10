@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="PM_Button.Primary">
-        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:background">@drawable/background_rounded_border2_logo</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="PM_Button.Login">
+        <item name="android:background">@drawable/background_rounded_border3_logo</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
     </style>
     <style name="tilMessageError">
         <item name="android:textSize">16sp</item>
@@ -13,4 +22,12 @@
         <item name="android:padding">10dp</item>
         <item name="srcCompat">@drawable/ic_close</item>
     </style>
+    <style name="AppCompatViewRounded">
+        <item name="android:background">@drawable/background_rounded_border2_logo</item>
+    </style>
+
+    <style name="DialogSlideFromRightAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>
+    </style>
+
 </resources>

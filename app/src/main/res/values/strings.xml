@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">ExploreGang</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -18,7 +18,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome!"</string>
     <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must have at least 6 characters</string>
+    <string name="invalid_password">The password must have between 6 and 30 characters, at least one uppercase, one lowercase and one number</string>
     <string name="login_failed">"Login failed"</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -31,23 +31,22 @@
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="login_button_login">Login</string>
     <string name="login_button_recover_password">Forgot my password</string>
-    <string name="login_button_register">Not registered yet?</string>
-    <string name="login_button_skip">skip</string>
+    <string name="login_button_register">Sign up</string>
+    <string name="login_button_skip">Guest mode</string>
     <string name="see_all_m">Ver todo</string>
-    <string name="nextEvents">Next events</string>
-    <string name="nextEvent">Next event</string>
+    <string name="nextActivities">Next activities</string>
+    <string name="nextActivity">Next activities</string>
     <string name="lastActivity">Last activity</string>
     <string name="lastActivityCarriedOut">Last activity carried out</string>
     <string name="title_home">Home</string>
     <string name="title_activities">Activities</string>
     <string name="title_asociations">Asociations</string>
     <string name="register_hint_name">Name</string>
-    <string name="login_hint_email">mail@example.com</string>
+    <string name="login_hint_email">Email</string>
     <string name="register_message_select_dob">Select a date of birth</string>
     <string name="profile_update_text_phone_code">Phone code</string>
     <string name="profile_update_hint_phone">Phone</string>
@@ -71,8 +70,8 @@
     <string name="nick_empty">Nick empty</string>
     <string name="dob_future">The date of birth cannot be in the future</string>
     <string name="dni_invalid">Invalid personal ID</string>
-    <string name="neg_next_event">There are no upcoming events</string>
-    <string name="no_activities">You are currently not registered for any upcoming activities</string>
+    <string name="neg_next_event">There are no upcoming activities</string>
+    <string name="no_activities">You are currently not enrolled at any upcoming activities</string>
     <string name="activities">Activities</string>
     <string name="no_posts">There are currently no posts to display.</string>
     <string name="register_message_email_short">Email is too short</string>
@@ -93,11 +92,11 @@
     <string name="login_text_access_account">Login</string>
     <string name="drawer_associations">Associations</string>
     <string name="help">Help?</string>
-    <string name="social">Social</string>
+    <string name="social">Users</string>
     <string name="reject">Reject</string>
     <string name="write_comment_write_here">Write your comment</string>
-    <string name="write_something">Write something...</string>
-    <string name="ok">Ok</string>
+    <string name="write_something">Write something…</string>
+    <string name="ok">OK</string>
     <string name="go_to_activities">Search activities</string>
     <string name="phone_short">Insert your phone number</string>
     <string name="stay_signed_in">Stay singed in?</string>
@@ -107,4 +106,165 @@
     <string name="do_not_show_again">Don\'t show this again</string>
     <string name="stay_signed_in2">Stay signed in</string>
     <string name="remember_me">Remember me</string>
+    <string name="acept">Acept</string>
+    <string name="accept">Accept</string>
+    <string name="name_channel">ExploreGang channel</string>
+    <string name="delete_account_message">Are you sure to delete the account?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="account">Account</string>
+    <string name="uninstall_message">Si necesitas ayuda, desintala esta aplicación.</string>
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu fringilla arcu. Mauris accumsan lobortis fermentum. Integer laoreet arcu nibh, vitae finibus nisl mollis et. Ut bibendum blandit est, sit amet egestas risus interdum ut. Maecenas eu placerat augue. Vivamus eu lorem a nibh fermentum pretium vel ut neque. Morbi interdum nunc id ornare viverra. Aenean in convallis magna. Duis fringilla nisl non neque tristique, at dictum massa lobortis. Nulla imperdiet mi imperdiet accumsan pretium. Aliquam scelerisque at lacus ac euismod. Vestibulum mauris diam, feugiat a malesuada sed, dictum et metus.  Nam porttitor ultrices eros, vel tincidunt sem sodales et. Morbi auctor metus vel sapien sagittis pulvinar. Vivamus dolor ex, aliquet quis ipsum vitae, porttitor iaculis justo. Proin a aliquet sapien. Nunc lobortis nulla eros, ac hendrerit neque tincidunt vel. Sed in purus porta, egestas tellus id, consectetur quam. Etiam venenatis nulla sed congue ultrices. Aenean interdum maximus est, eu vestibulum dolor semper sed. Quisque at lacus id ante ultrices vulputate et quis lacus. Ut nec mauris convallis, molestie sem non, placerat ligula. Duis pharetra at odio at porttitor. Duis commodo sem vel mauris condimentum, vitae ullamcorper ante posuere.  Nulla molestie posuere massa, sed molestie ante ullamcorper ac. Nulla quis est neque. Sed eget sapien lacinia, bibendum purus id, feugiat nibh. Vivamus consectetur lectus a justo ornare suscipit. Mauris a libero et quam sodales pellentesque id ut ligula. Morbi hendrerit in eros ac pretium. Suspendisse potenti. Praesent varius sit amet est tincidunt accumsan. Ut orci justo, auctor sit amet metus maximus, ornare tristique felis.  Mauris ultricies tempus justo quis blandit. Mauris id dui blandit, venenatis diam quis, tempus sem. Nam at purus vitae dui mattis congue. Vivamus sit amet est augue. In leo nisi, convallis sit amet dapibus quis, rutrum non leo. Vestibulum et lacus eu lacus dictum feugiat. Quisque non velit in justo eleifend elementum id eu metus. Nam cursus ante ipsum, et suscipit urna finibus ac. Aenean cursus fermentum leo id fermentum. Praesent auctor tellus in turpis accumsan hendrerit.  In nec felis at nisl convallis elementum. Suspendisse consectetur dictum laoreet. Suspendisse semper finibus iaculis. Quisque dapibus risus ut eros consequat maximus eu non nibh. Vivamus vel enim ac quam venenatis malesuada. Vestibulum pharetra malesuada consectetur. Donec vitae sem ligula. Sed non purus accumsan, interdum urna sit amet, mattis ante. Sed est lectus, maximus vel sapien et, fermentum pharetra massa. Maecenas id dui metus. Duis consectetur ante sed tellus molestie, quis sollicitudin orci iaculis.</string>
+    <string name="something_happened">Something happened</string>
+    <string name="successful_registration">Successful registration</string>
+    <string name="registration_failed">Registration failed</string>
+    <string name="failed_register_user">Failed to register user</string>
+    <string name="phone_invalid">Enter a valid phone number</string>
+    <string name="association">Association</string>
+    <string name="profile">Profile</string>
+    <string name="hello_guest">Hello guest!</string>
+    <string name="delete_account_message_error">Could not delete account</string>
+    <string name="delete_account_message_success">The account has been successfully deleted</string>
+    <string name="email_pass_empty">You must enter an email and a password</string>
+    <string name="email_invalid">You must enter a valid email</string>
+    <string name="user_not_found">User not found</string>
+    <string name="incorrect_pass">Incorrect email or password</string>
+    <string name="greetings_message">Hello %s!</string>
+    <string name="email_alredy_used">This email is already registered</string>
+    <string name="pass_empty">Password empty</string>
+    <string name="document_not_null">The document is not null</string>
+    <string name="document_null">The document is null</string>
+    <string name="fail_getuser">Failed to get the user information</string>
+    <string name="profile_update">Update profile</string>
+    <string name="successful_update">User updated successfully</string>
+    <string name="failed_update">Update failed</string>
+    <string name="picture">Picture</string>
+    <string name="go_to_login">Go to login</string>
+    <string name="log_in">Log in</string>
+    <string name="user_login_necesary">Login is required to proceed</string>
+    <string name="generic_text_delete_schedule">Delete time</string>
+    <string name="generic_text_edit_schedule">Edit time</string>
+    <string name="error_reautentication">There was an error in authentication</string>
+    <string name="error_change_password">There was an error changing the password</string>
+    <string name="success_change_password">Password was successfully updated</string>
+    <string name="changepassword">Change password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email_sent">Password reset email sent successfully</string>
+    <string name="email_not_sent">There was an error sending the password reset email</string>
+    <string name="add_activity">Create activity</string>
+    <string name="description">Description</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">Finish date</string>
+    <string name="hour">Hour</string>
+    <string name="location">Location</string>
+    <string name="description_empty">Description empty</string>
+    <string name="register_message_select_date">Select a start date</string>
+    <string name="register_message_select_date_end">Select an end date</string>
+    <string name="dates_are_same">The start date and end date cannot be the same</string>
+    <string name="start_date_after_end">The start date is later than the end date</string>
+    <string name="date_past">The selected date has already passed</string>
+    <string name="no_activities_list">No activities</string>
+    <string name="failed_get_activities">Failed to get activities</string>
+    <string name="delete_account_message_fail">There was an error deleting the account</string>
+    <string name="activity_created_successfully">Activity created successfully</string>
+    <string name="activity_creation_failed">Could not create activity</string>
+    <string name="empty_email_forgot_pass">Enter an email to send the password recovery email</string>
+    <string name="email_not_found">Email could not be accessed to send a recovery email</string>
+    <string name="title_filters">Filters</string>
+    <string name="search_for_activity">Search for activity</string>
+    <string name="etSearchForActivity_hint">Name or creator…</string>
+    <string name="generic_search1">Search</string>
+    <string name="clean_filters">Clean filters</string>
+    <string name="only_my_activities">Only my activities</string>
+    <string name="activities_enrolled">Activities I\'m enrolled in</string>
+    <string name="activities_created">Activities I\'ve created</string>
+    <string name="date">Date</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="to_date">to</string>
+    <string name="from_date">From</string>
+    <string name="follow">Follow</string>
+    <string name="details">Details</string>
+    <string name="created_by">Created by</string>
+    <string name="created">Creation</string>
+    <string name="on_date">on</string>
+    <string name="following">Following</string>
+    <string name="fail_follow_activity">Failed to follow to the activity</string>
+    <string name="activity">Activity</string>
+    <string name="create_activity">Create activity</string>
+    <string name="exploregang">ExploreGang</string>
+    <string name="startdate_enddate_creationdate">Start date</string>
+    <string name="your_activity">Your activity</string>
+    <string name="login_for_follow">Sign in to follow activities</string>
+    <string name="max_part">Maximum number of participants</string>
+    <string name="min_part">Minimum number of participants</string>
+    <string name="max">Maximun</string>
+    <string name="min">Minimum</string>
+    <string name="number_participants">Number of participants</string>
+    <string name="error_min_max">The maximum number of participants must be greater than the minimum.</string>
+    <string name="see_participants">See participants</string>
+    <string name="enrolled">Enrolled</string>
+    <string name="enrolled_to_activity">You are enrolled for this activity</string>
+    <string name="enroll_to_activity">Click to enroll in the activity</string>
+    <string name="enroll">Enroll</string>
+    <string name="join">Join</string>
+    <string name="joined_to_activity">You have joined the activity</string>
+    <string name="max_reached">Maximum participants reached</string>
+    <string name="visible_field">Visible field</string>
+    <string name="public_profile">Public profile</string>
+    <string name="logout_advert">Are you sure you want to log out?</string>
+    <string name="public_activity">Public activity</string>
+    <string name="users">Users</string>
+    <string name="no_users_list">No users found</string>
+    <string name="left_activity">Disenroll from activity</string>
+    <string name="not_enrolled">You are no longer enrolled in the activity</string>
+    <string name="fail_enroll_activity">Could not register for the activity</string>
+    <string name="delete_activity">Delete activity</string>
+    <string name="activity_deleted">The activity has been successfully deleted</string>
+    <string name="adver_delete_activity">Are you sure to delete the activity?</string>
+    <string name="user">User</string>
+    <string name="add_contact">Add to contact list</string>
+    <string name="added_contac">Contact added successfully</string>
+    <string name="see_contacts">See contacts</string>
+    <string name="quit">Quit</string>
+    <string name="remove_contact">Remove contact</string>
+    <string name="remove">Remove</string>
+    <string name="advert_remove_user">Remove user from contact list</string>
+    <string name="advert_remove_user_activity">Unsubscribe the user from the activity?</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="something_failed">Something failed</string>
+    <string name="login_for_delete">This action requires recent re-authentication</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="own_activities">Own activities</string>
+    <string name="see_own_activities">See my activities</string>
+    <string name="see_enrolled_activities">See my joined activities</string>
+    <string name="login_for_join">Sing in for join</string>
+    <string name="disenroll">Disenroll</string>
+    <string name="advert_disenroll_user_activity">Disenroll user from activity</string>
+    <string name="remove_activity_advert">Are you sure to delete the activity?</string>
+    <string name="delete_activity_correct">The activity has been deleted successfully</string>
+    <string name="disenroll_user">Disenroll user</string>
+    <string name="help_message">If you have any problems or questions, send a message to the phone number 669425324 or to the email cironidas@gmail.com</string>
+    <string name="info">Info</string>
+    <string name="info_message">ExploreGang is an application for activity management. To access many of its features, you need to have a signed-in account. You can view user and activity information in the app by clicking on its item. If you want to keep your phone or email information private, you can configure it when creating or editing your account. Once signed in, you can access different activity listings, create activities, join them, or filter the results. Additionally, you can add users to your contacts list. Lastly, please note that activities, participants in your activities, and your own account can be deleted, although it is not recommended. I hope this information has been helpful to you, and I hope you enjoy the app.</string>
+    <string name="about">About us</string>
+    <string name="version">Version 1.0</string>
+    <string name="creator">Author: Ciro León Espinosa Avilés</string>
+    <string name="date_format" translatable="false">dd/MM/yyyy HH:mm</string>
+    <string name="notification_title_before">"Next activity: "</string>
+    <string name="notification_message_before">The activity will start soon</string>
+    <string name="notification_message_exact">The activity is about to start</string>
+    <string name="notification_advert">You will receive a notification before starting the activity</string>
+    <string name="activities_deleted">Some activities in which you were enrolled have been deleted</string>
+    <string name="disenroll_info">You are no longer enrolled in the activity</string>
+    <string name="user_private">Private user</string>
+    <string name="error_max_less_zero">The maximum number of participants must be greater than zero</string>
+    <string name="activity_edited_successfully">Activity edited succesfully</string>
+    <string name="max_participants">The maximum number of participants cannot be less than those currently registered.</string>
+    <string name="edit_activity">Edit activity</string>
+    <string name="max_zero">The maximum number of participants must be greater than zero</string>
+    <string name="number_participants_visible_field">Number of participants visible</string>
+    <string name="need_permission">You need to enable the permission</string>
 </resources>

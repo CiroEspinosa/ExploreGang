@@ -10,14 +10,14 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/fragmentActivities"
+        android:id="@+id/fragmentActivityList"
 
         android:icon="@drawable/activities"
         android:title="@string/title_activities"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/fragmentAsociations"
+        android:id="@+id/fragmentUserList"
 
         android:icon="@drawable/moai"
         android:title="@string/social"
