@@ -58,7 +58,7 @@ class UserListViewModel : ViewModel() {
     }
 
     fun getEnrolledUsers(activity: Actividad) {
-        _result.value = ListResult.LOADING
+        /*_result.value = ListResult.LOADING
         val aux = ArrayList<User>()
         UserRepository.getAllUsers({
             aux.addAll(UserRepository.allUsers)
@@ -76,11 +76,11 @@ class UserListViewModel : ViewModel() {
             _result.value = ListResult.FAILURE
         }, {
             _result.value = ListResult.NODATA
-        })
+        })*/
     }
 
     fun filterEnrolledUsers(name: String,activity:Actividad) {
-        _result.value = ListResult.LOADING
+        /*_result.value = ListResult.LOADING
         val aux = ArrayList<User>()
         UserRepository.getAllUsers({
             aux.addAll(UserRepository.allUsers)
@@ -97,11 +97,11 @@ class UserListViewModel : ViewModel() {
             _result.value = ListResult.FAILURE
         }, {
             _result.value = ListResult.NODATA
-        })
+        })*/
     }
 
     fun getContacts() {
-        _result.value = ListResult.LOADING
+        /*_result.value = ListResult.LOADING
         val aux = ArrayList<User>()
         UserRepository.getAllUsers({
             aux.addAll(UserRepository.allUsers)
@@ -118,11 +118,11 @@ class UserListViewModel : ViewModel() {
             _result.value = ListResult.FAILURE
         }, {
             _result.value = ListResult.NODATA
-        })
+        })*/
     }
 
     fun filterContacts(name: String) {
-        _result.value = ListResult.LOADING
+        /*_result.value = ListResult.LOADING
         val aux = ArrayList<User>()
         UserRepository.getAllUsers({
             aux.addAll(UserRepository.allUsers)
@@ -139,6 +139,6 @@ class UserListViewModel : ViewModel() {
             _result.value = ListResult.FAILURE
         }, {
             _result.value = ListResult.NODATA
-        })
+        })*/
     }
 }

@@ -13,6 +13,7 @@ import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.NavHostFragment
+import com.bumptech.glide.Glide
 import com.example.exploregang.R
 import com.example.exploregang.data.model.UserRegisterFields
 import com.example.exploregang.data.prefs.UserPrefsManager
@@ -40,15 +41,17 @@ class SingUpFragment() : Fragment() {
         binding = FragmentSingUpBinding.inflate(layoutInflater)
         binding.apply {
             binding.ivDeletePhoto.isVisible = false
+            Glide.with(requireContext())
+                .load(R.drawable.ic_wojak)
+                .circleCrop()
+                .into(binding.ivUserPhoto)
+
             btnBack.setOnClickListener {
                 NavHostFragment.findNavController(requireParentFragment()).navigateUp()
             }
             btnSingUp.setOnClickListener {
                 requireActivity().currentFocus?.clearFocus()
                 singUp()
-            }
-            etDob.setOnClickListener {
-                showDateTimePickerDialog(etDob, requireContext())
             }
             ivUserPhoto.setOnClickListener {
                 abrirGaleria(pickMedia)
@@ -64,8 +67,10 @@ class SingUpFragment() : Fragment() {
                 binding.ivDeletePhoto.setOnClickListener {
                     binding.ivDeletePhoto.isVisible = false
                     imageId = ""
-                    binding.ivUserPhoto.setImageResource(R.drawable.ic_camera)
-                    binding.ivUserPhoto.setPadding(Utils.dpToPx(20, resources))
+                    Glide.with(requireContext())
+                        .load(R.drawable.ic_wojak)
+                        .circleCrop()
+                        .into(binding.ivUserPhoto)
                 }
             }
             Utils.saveImage(uri) { imageId: String? ->
@@ -86,14 +91,14 @@ class SingUpFragment() : Fragment() {
                    surname = etSurname.text.toString().trim()*/
                 email = etEmail.text.toString().trim()
                 password = etPassword.text.toString().trim()
-                passwordRepeat = etPasswordRepeat.text.toString().trim()
+
                 /* tutorName = etTutorName.text.toString()
                  tutorEmail = etTutorEmail.text.toString().trim()
                  tutorPhone = etTutorPhone.text.toString().trim()*/
-                 dob = Utils.stringToDate(etDob.text.toString())
-                phone = etPhone.text.toString().trim()
+
+
                 photo = imageId
-                isPublic=cbIsPublic.isChecked
+
 
                 when (registerViewModel.checkFields(userRegisterFields)) {
                     UserResults.SUCCESS -> {
@@ -132,45 +137,9 @@ class SingUpFragment() : Fragment() {
                                 loading.isVisible = false
                             })
                     }
-                    UserResults.NICKEMPTY -> {
-                        Toast.makeText(requireContext(), R.string.nick_empty, Toast.LENGTH_LONG)
-                            .show()
-                        //etNick.requestFocus()
-                    }
-                    UserResults.SURNAMEEMPTY -> {
-                        Toast.makeText(
-                            requireContext(),
-                            R.string.register_message_surname_empty,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        //etSurname.requestFocus()
-                    }
                     UserResults.NAMEMPTY -> {
                         etName.showError(tilName, R.string.name_empty)
                         // Toast.makeText(requireContext(), R.string.name_empty,Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.FUTUREBIRTH -> {
-                        loading.isVisible = false
-                        etDob.showError(tilDob, R.string.dob_future)
-                        /* Toast.makeText(requireContext(), R.string.dob_future, Toast.LENGTH_SHORT)
-                             .show()*/
-                    }
-                    UserResults.NODATEBRITH -> {
-                        etDob.showError(tilDob, R.string.register_message_select_dob)
-                        /* Toast.makeText(
-                             requireContext(),
-                             R.string.register_message_select_dob,
-                             Toast.LENGTH_SHORT
-                         ).show()*/
-                    }
-                    UserResults.INVALIDPHONE -> {
-
-                        etPhone.showError(tilPhone, R.string.phone_invalid)
-                        //  Toast.makeText(requireContext(), R.string.phone_invalid, Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.EMAILSHORT -> {
-                        etEmail.showError(tilEmail, R.string.register_message_email_short)
-                        //Toast.makeText(requireContext(), R.string.register_message_email_short, Toast.LENGTH_SHORT).show()
                     }
                     UserResults.EMAILFORMAT -> {
 
@@ -182,34 +151,7 @@ class SingUpFragment() : Fragment() {
                         etPassword.showError(tilPassword, R.string.invalid_password)
                         // Toast.makeText(requireContext(), R.string.invalid_password, Toast.LENGTH_SHORT).show()
                     }
-                    UserResults.WRONGPASSWORD -> {
 
-                        etPasswordRepeat.showError(
-                            tilPasswordRepeat,
-                            R.string.register_message_passwords_different
-                        )
-                        // Toast.makeText(requireContext(), R.string.register_message_passwords_different, Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.TUTORNAMESHORT -> {
-
-                        //etTutorName.showError(tilTutorName, R.string.name_empty)
-                        // Toast.makeText(requireContext(), R.string.name_empty, Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.TUTOREMAILSHORT -> {
-
-                        //  etTutorEmail.showError(tilTutorEmail, R.string.register_message_email_short)
-                        //   Toast.makeText(requireContext(), R.string.register_message_email_short, Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.TUTOREMAILFORMAT -> {
-
-                        // etTutorEmail.showError(tilTutorEmail, R.string.register_message_email_incorrect)
-                        //  Toast.makeText(requireContext(), R.string.register_message_email_incorrect, Toast.LENGTH_SHORT).show()
-                    }
-                    UserResults.TUTORPHONEINVALID -> {
-
-                        //      etTutorPhone.showError(tilPhone, R.string.phone_invalid)
-                        //                                    Toast.makeText(requireContext(), R.string.phone_invalid, Toast.LENGTH_SHORT).show()
-                    }
                     else -> {
                         Toast.makeText(
                             requireContext(),

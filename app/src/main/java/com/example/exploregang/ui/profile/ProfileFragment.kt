@@ -89,9 +89,7 @@ class ProfileFragment : Fragment() {
 
             etEmailP.setText(currentUser!!.email)
             etNameP.setText(currentUser!!.name)
-            etPhoneP.setText(currentUser!!.phone)
-            etDob.setText(dateToString(currentUser!!.dob))
-            cbIsPublic.isChecked = currentUser!!.isPublic!!
+
 
             loadingP.isVisible = false
         }

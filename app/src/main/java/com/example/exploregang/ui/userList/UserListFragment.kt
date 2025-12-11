@@ -117,11 +117,11 @@ class UserListFragment : Fragment(), UserAdapter.OnClickUserListener {
     }
 
     override fun onClickUser(user: User?) {
-        if(user!!.isPublic == true){
+
         val bundle = Bundle()
         bundle.putParcelable(collectionUser, user)
         NavHostFragment.findNavController(this)
-            .navigate(R.id.action_fragmentUserList_to_userDetailsFragment, bundle)}
+            .navigate(R.id.action_fragmentUserList_to_userDetailsFragment, bundle)
     }
 
     override fun onLongClickUser(user: User?) {

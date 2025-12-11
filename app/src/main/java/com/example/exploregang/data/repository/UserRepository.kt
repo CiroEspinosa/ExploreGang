@@ -31,14 +31,7 @@ object UserRepository {
                 null,
                 name!!,
                 photo,
-                dob!!,
-                phone,
                 email!!,
-                ArrayList(),
-                ArrayList(),
-                Date(),
-                isPublic,
-                ArrayList()
             )
         }
         return user

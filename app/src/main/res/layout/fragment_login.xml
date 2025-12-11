@@ -57,21 +57,8 @@
                     android:layout_marginTop="30dp"
                     android:gravity="center|bottom">
 
-                    <TextView
-                        android:layout_marginTop="30dp"
-                        android:id="@+id/tvlogin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textSize="24sp"
-                        app:layout_constraintBottom_toTopOf="@+id/til_email"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_email"
-                        android:layout_marginTop="30dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -79,18 +66,18 @@
                         app:errorIconDrawable="@color/transparent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvlogin">
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etEmail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:autofillHints="emailAddress"
                             android:background="@color/transparent"
                             android:hint="@string/prompt_email"
                             android:inputType="textEmailAddress"
                             android:minHeight="48dp"
                             android:selectAllOnFocus="true"
-                            android:autofillHints="emailAddress"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView" />

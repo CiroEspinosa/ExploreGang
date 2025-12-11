@@ -18,7 +18,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome!"</string>
     <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">The password must have between 6 and 30 characters, at least one uppercase, one lowercase and one number</string>
+    <string name="invalid_password">The password must have at least three characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -33,7 +33,7 @@
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="login_button_login">Login</string>
+    <string name="login_button_login">Sign in</string>
     <string name="login_button_recover_password">Forgot my password</string>
     <string name="login_button_register">Sign up</string>
     <string name="login_button_skip">Guest mode</string>
@@ -65,7 +65,7 @@
     <string name="sing_up">Sing up</string>
     <string name="tutorInformation">Tutor info</string>
     <string name="tutor_name">Tutor name</string>
-    <string name="name_empty">Name empty</string>
+    <string name="name_empty">Empty name</string>
     <string name="register_message_surname_empty">Surname empty</string>
     <string name="nick_empty">Nick empty</string>
     <string name="dob_future">The date of birth cannot be in the future</string>
@@ -75,7 +75,7 @@
     <string name="activities">Activities</string>
     <string name="no_posts">There are currently no posts to display.</string>
     <string name="register_message_email_short">Email is too short</string>
-    <string name="register_message_email_incorrect">Email not valid</string>
+    <string name="register_message_email_incorrect">Invalid email</string>
     <string name="register_message_password_short">Password too short</string>
     <string name="register_message_passwords_different">Passwords do not match</string>
     <string name="drawer_text_logout">Logout</string>
@@ -267,4 +267,5 @@
     <string name="max_zero">The maximum number of participants must be greater than zero</string>
     <string name="number_participants_visible_field">Number of participants visible</string>
     <string name="need_permission">You need to enable the permission</string>
+    <string name="nextEvent">aana</string>
 </resources>

@@ -78,8 +78,9 @@ object Utils {
 
     //region Validaciones
     fun isPasswordValid(newPassword: String): Boolean {
-        val regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{6,30}\$".toRegex()
-        return regex.matches(newPassword)
+        //val regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{6,30}\$".toRegex()
+        //return regex.matches(newPassword)
+        return newPassword.length>=3
     }
 
     private fun isEmailValid(email: String?): Boolean {

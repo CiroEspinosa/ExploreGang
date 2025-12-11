@@ -219,7 +219,7 @@ class ActivityDetailFragment : Fragment() {
     private fun onClickJoinDef() {
         binding.apply {
             activity.participantsIds.add(currentUser!!.id!!)
-            currentUser!!.enrolledActivities!!.add(activity.id!!)
+            //currentUser!!.enrolledActivities!!.add(activity.id!!)
             uploadUser(currentUser!!, {}, {})
             ActivityRepository.uploadActivity(activity, {}, {})
             if (activity.startDate!!.after(Date())) {
@@ -293,7 +293,7 @@ class ActivityDetailFragment : Fragment() {
             dialog.onDismiss = { this.binding.loadingP.isVisible = false }
             binding.acceptBtnCd.setOnClickListener {
                 dialog.dismiss()
-                currentUser!!.ownActivities.remove(activity.id)
+                //currentUser!!.ownActivities.remove(activity.id)
                 uploadUser(currentUser!!)
                 ActivityRepository.deleteActivity(activity, {}, {})
                 Toast.makeText(
@@ -333,7 +333,7 @@ class ActivityDetailFragment : Fragment() {
             tvDisenroll.setText(R.string.left_activity)
             tvDisenroll.setOnClickListener {
                 activity.participantsIds.remove(currentUser!!.id!!)
-                currentUser!!.enrolledActivities.remove(activity.id)
+                //currentUser!!.enrolledActivities.remove(activity.id)
                 uploadUser(currentUser!!, {}, {})
                 ActivityRepository.uploadActivity(activity, {}, {})
                 cancelNotification(activity.id!!, requireContext())

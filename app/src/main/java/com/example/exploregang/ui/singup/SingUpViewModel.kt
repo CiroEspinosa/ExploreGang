@@ -18,36 +18,6 @@ class SingUpViewModel : ViewModel() {
                 if (name!!.isEmpty()) {
                     return UserResults.NAMEMPTY
                 }
-                /*  // check surname
-                    if (surname!!.isEmpty()) {
-                        return SingUpResult.SURNAMEEMPTY
-                    }
-
-                    // nick
-                    if (nick!!.isEmpty()) {
-
-                        return SingUpResult.NICKEMPTY
-                    }
- */
-                // check dni
-
-
-                // check dob
-                if (dob != null && dob is Date) {
-                    if (dob!!.after(Date())) {
-                        return UserResults.FUTUREBIRTH
-                    }
-                } else {
-                    return UserResults.NODATEBRITH
-                }
-
-                val isValid = !isPhoneValid(phone)
-                if (isValid && phone != "") {
-                    return UserResults.INVALIDPHONE
-                }
-                if (email!!.length < 3) {
-                    return UserResults.EMAILSHORT
-                }
                 if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     return UserResults.EMAILFORMAT
                 }
@@ -55,10 +25,6 @@ class SingUpViewModel : ViewModel() {
                     if (!isPasswordValid(password!!)) {
                         return UserResults.PASSWORDSHORT
                     }
-                }
-                // check password equals
-                if (!password.equals(passwordRepeat) && password != null) {
-                    return UserResults.WRONGPASSWORD
                 }
                /* if (!isAdult(dob!!)) {
                     if (tutorName!!.isEmpty()) {

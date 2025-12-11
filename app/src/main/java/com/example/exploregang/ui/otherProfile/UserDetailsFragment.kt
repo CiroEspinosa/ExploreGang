@@ -39,7 +39,7 @@ class UserDetailsFragment : Fragment() {
                 if (currentUser!!.id == user.id) {
                     btnAddtoContact.isVisible = false
                 }
-                if (currentUser!!.contacts!!.contains(user.id)) {
+                /*if (currentUser!!.contacts!!.contains(user.id)) {
                     btnAddtoContact.setText(R.string.remove_contact)
                     btnAddtoContact.setOnClickListener {
 
@@ -47,13 +47,13 @@ class UserDetailsFragment : Fragment() {
                     }
                 } else {
                     btnAddtoContact.setOnClickListener { addContact() }
-                }
+                }*/
             }
 
 
-            etDob.setText(dateToString(user.dob))
+
             etNameP.setText(user.name)
-            etPhoneP.setText(user.phone)
+
             etEmailP.setText(user.email)
             if (!user.imageId.isNullOrEmpty()) {
                 Utils.getImage(user.imageId,binding.ivUserPhoto)
@@ -67,14 +67,14 @@ class UserDetailsFragment : Fragment() {
     }
 
     private fun removeContact() {
-        currentUser!!.contacts!!.remove(user.id)
+        //currentUser!!.contacts!!.remove(user.id)
         uploadUser(currentUser!!, { }, {})
         NavHostFragment.findNavController(this).navigateUp()
         binding.btnAddtoContact.isVisible = false
     }
 
     private fun addContact() {
-        binding.btnAddtoContact.isVisible = false
+       /* binding.btnAddtoContact.isVisible = false
         currentUser!!.contacts!!.add(user.id!!)
         uploadUser(
             currentUser!!,
@@ -83,7 +83,7 @@ class UserDetailsFragment : Fragment() {
                 Toast.makeText(requireContext(), R.string.something_failed, Toast.LENGTH_SHORT)
                     .show()
             })
-        NavHostFragment.findNavController(this).navigateUp()
+        NavHostFragment.findNavController(this).navigateUp()*/
 
     }
 

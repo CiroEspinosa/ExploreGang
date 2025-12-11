@@ -59,10 +59,6 @@ class UserAdapter (
             holder.binding.ivPhoto.setPadding(20)
         }
         holder.binding.tvUserName.setText(user.name)
-        if(user.isPublic == true){
-            holder.binding.tvEmail.setText(user.email)
-
-        }
         holder.bind(listener,user)
     }
 

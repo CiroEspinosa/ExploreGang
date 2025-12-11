@@ -86,7 +86,7 @@ class EditProfileFragment : Fragment() {
 
             etEmailP.setText(currentUser!!.email)
             etNameP.setText(currentUser!!.name)
-            etPhoneP.setText(currentUser!!.phone)
+
             loadingP.isVisible = false
             btnBackProfile.setOnClickListener {
                 NavHostFragment.findNavController(requireParentFragment()).navigateUp()
@@ -106,9 +106,7 @@ class EditProfileFragment : Fragment() {
             }
 
             etEmailP.isEnabled = false
-            etDob.setText(Utils.dateToString(currentUser!!.dob))
-            etDob.setOnClickListener { Utils.showDateTimePickerDialog(etDob, requireContext()) }
-            cbIsPublic.isChecked= currentUser!!.isPublic!!
+
             btnUpdate.setOnClickListener {
 
                 requireActivity().currentFocus?.clearFocus()
@@ -137,9 +135,7 @@ class EditProfileFragment : Fragment() {
                     UserResults.SUCCESS -> {
                         loadingP.isVisible = true
                         currentUser!!.name=name
-                        currentUser!!.dob=dob
-                        currentUser!!.isPublic=isPublic
-                        currentUser!!.phone=phone
+
                         NavHostFragment.findNavController(this@EditProfileFragment)
                             .navigateUp()
                         UserRepository.uploadUser(currentUser!!)

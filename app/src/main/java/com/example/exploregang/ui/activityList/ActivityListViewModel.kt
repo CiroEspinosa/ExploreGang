@@ -168,9 +168,9 @@ class ActivityListViewModel() : ViewModel() {
 
 
     private fun detectDeletedActivities(context: Context) {
-        val enrolledAct = currentUser!!.enrolledActivities.size
-        val iterator = currentUser!!.enrolledActivities.iterator()
-        while (iterator.hasNext()) {
+        //val enrolledAct = currentUser!!.enrolledActivities.size
+        //val iterator = currentUser!!.enrolledActivities.iterator()
+        /*while (iterator.hasNext()) {
             val id = iterator.next()
             var exists = false
             for (activity in activityList) {
@@ -202,7 +202,7 @@ class ActivityListViewModel() : ViewModel() {
         uploadUser(currentUser!!, {}, {})
         if (currentUser!!.enrolledActivities.size < enrolledAct) {
             _result.value = ListResult.ACTIVITYDELETED
-        }
+        }*/
     }
 
 

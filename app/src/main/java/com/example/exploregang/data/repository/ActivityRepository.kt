@@ -24,14 +24,9 @@ object ActivityRepository {
                     id = user.id,
                     name = user.name,
                     imageId = user.imageId,
-                    dob = user.dob,
-                    phone = user.phone,
+
                     email = user.email,
-                    ownActivities = ArrayList(user.ownActivities),
-                    enrolledActivities = ArrayList(user.enrolledActivities),
-                    creationDate = user.creationDate,
-                    isPublic = user.isPublic,
-                    contacts = ArrayList(user.contacts)
+
                 )
             }
 

@@ -252,12 +252,12 @@ class HomeFragment : Fragment(), ActivityAdapter.OnClickActivityListener {
                 binding.tvhello.text = greetings
                 viewModel.getNextActivities(requireContext())
 
-                if (currentUser!!.enrolledActivities.isNotEmpty()) {
+               /* if (currentUser!!.enrolledActivities.isNotEmpty()) {
                     btnSeeEnrolledActivities.isVisible = true
                 }
                 if (currentUser!!.ownActivities.isNotEmpty()) {
                     btnSeeOwnActivities.isVisible = true
-                }
+                }*/
                // llNextActivities.isVisible = true
             }else{
                 setDefaultImage()

@@ -135,7 +135,7 @@ class OtherActivityListFragment : Fragment(), ActivityAdapter.OnClickActivityLis
             binding.acceptBtnCd.setText(R.string.delete)
             binding.acceptBtnCd.setOnClickListener {
                 dialog.dismiss()
-                currentUser!!.ownActivities.remove(actividad!!.id)
+                //currentUser!!.ownActivities.remove(actividad!!.id)
                 uploadUser(currentUser!!)
                 ActivityRepository.deleteActivity(actividad!!,
                     {

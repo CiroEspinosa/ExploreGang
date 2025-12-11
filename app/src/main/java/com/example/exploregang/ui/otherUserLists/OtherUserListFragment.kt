@@ -157,14 +157,12 @@ class OtherUserListFragment : Fragment(), UserAdapter.OnClickUserListener {
     }
 
     override fun onClickUser(user: User?) {
-        if (user!!.isPublic!!) {
+
             val bundle = Bundle()
             bundle.putParcelable(Constants.collectionUser, user)
             NavHostFragment.findNavController(this)
                 .navigate(R.id.action_otherUserListFragment_to_userDetailsFragment, bundle)
-        } else {
-            Toast.makeText(requireContext(), R.string.user_private, Toast.LENGTH_SHORT).show()
-        }
+
 
     }
 
@@ -175,7 +173,7 @@ class OtherUserListFragment : Fragment(), UserAdapter.OnClickUserListener {
             binding.acceptBtnCd.setText(R.string.remove)
             binding.acceptBtnCd.setOnClickListener {
                 dialog.dismiss()
-                currentUser!!.contacts!!.remove(user.id)
+                //currentUser!!.contacts!!.remove(user.id)
                 this.binding.loading.isVisible = true
                 uploadUser(currentUser!!)
                 viewModel.getContacts()
@@ -196,7 +194,7 @@ class OtherUserListFragment : Fragment(), UserAdapter.OnClickUserListener {
             binding.acceptBtnCd.setOnClickListener {
                 dialog.dismiss()
                 actividad.participantsIds.remove(user.id)
-                user.enrolledActivities!!.remove(actividad.id)
+                //user.enrolledActivities!!.remove(actividad.id)
                 uploadUser(user, {}, {})
                 ActivityRepository.uploadActivity(actividad,
                     { viewModel.getEnrolledUsers(actividad) }, {})
@@ -212,9 +210,7 @@ class OtherUserListFragment : Fragment(), UserAdapter.OnClickUserListener {
         if (arguments == null) {
             showDialogRemoveUserContact(user!!)
         } else {
-            if (currentUser!!.ownActivities!!.contains(actividad.id)) {
-                showDialogRemoveUserActivity(user!!)
-            }
+
         }
     }
 

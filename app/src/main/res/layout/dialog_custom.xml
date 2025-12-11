@@ -112,7 +112,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:padding="3dp"
-                tools:text="@string/reject" />
+                tools:text="@string/cancel" />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/accept_btn_cd"
                 style="@style/PM_Button.Primary"
@@ -120,7 +120,7 @@
                 tools:visibility="visible"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                tools:text="Ir a Iniciar sesion"
+                tools:text="@string/accept"
                 android:padding="3dp"
                 android:layout_margin="5dp"/>
 

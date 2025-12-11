@@ -117,7 +117,7 @@ class AddActivityFragment : Fragment() {
                     ).show()
 
                     ActivityRepository.uploadActivity(activity, { activity ->
-                        currentUser!!.ownActivities!!.add(activity.id!!)
+                        //currentUser!!.ownActivities!!.add(activity.id!!)
                         uploadUser(currentUser!!)
                     })
                 }
